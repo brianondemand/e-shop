@@ -169,7 +169,7 @@ const ManageOrdersClient: React.FC<ManageOrdersClientProps> = ({ orders }) => {
       })
       .catch((err) => {
         toast.error("Something went wrong");
-        console.log(err);
+        // console.log(err);
       });
   }, []);
 
@@ -186,7 +186,7 @@ const ManageOrdersClient: React.FC<ManageOrdersClientProps> = ({ orders }) => {
       })
       .catch((err) => {
         toast.error("Something went wrong");
-        console.log(err);
+        // console.log(err);
       });
   }, []);
 

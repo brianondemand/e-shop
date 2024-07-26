@@ -11,7 +11,7 @@ interface Iprams {
 }
 
 const Product = async ({ params }: { params: Iprams }) => {
-  console.log("params", params);
+  // console.log("params", params);
 
   const product = await getProductById(params);
 

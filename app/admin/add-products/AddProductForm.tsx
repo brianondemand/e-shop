@@ -75,7 +75,7 @@ const AddProductForm = () => {
 
   //FUNCTION FOR SUBMITTING THE FORM FOR CREATION OF A NEW PRODUCT
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    console.log("Product Data", data);
+    // console.log("Product Data", data);
     //save product to mongodb
     setIsLoading(true);
     let uploadImages: UploadedImageType[] = [];
@@ -108,19 +108,19 @@ const AddProductForm = () => {
                 (snapshot) => {
                   const progress =
                     (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                  console.log("Upload is " + progress + "% done");
+                  // console.log("Upload is " + progress + "% done");
                   switch (snapshot.state) {
                     case "paused":
-                      console.log("Upload is paused");
+                      // console.log("Upload is paused");
                       break;
                     case "running":
-                      console.log("Upload is running");
+                      // console.log("Upload is running");
                       break;
                   }
                 },
                 (error) => {
                   // Handle unsuccessful uploads
-                  console.log("Error uploading Image", error);
+                  // console.log("Error uploading Image", error);
                   reject(error);
                 },
                 () => {
@@ -132,11 +132,11 @@ const AddProductForm = () => {
                         ...item,
                         image: downloadURL,
                       });
-                      console.log("File available at", downloadURL);
+                      // console.log("File available at", downloadURL);
                       resolve();
                     })
                     .catch((error) => {
-                      console.log("Error getting downloadable URL", error);
+                      // console.log("Error getting downloadable URL", error);
                       reject(error);
                     });
                 }
@@ -146,7 +146,7 @@ const AddProductForm = () => {
         }
       } catch (error) {
         setIsLoading(false);
-        console.log("Error handling Image uploads", error);
+        // console.log("Error handling Image uploads", error);
         return toast.error("Error handling image upload");
       }
     };

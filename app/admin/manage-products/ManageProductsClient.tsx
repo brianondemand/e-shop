@@ -124,7 +124,7 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
       })
       .catch((err) => {
         toast.error("Something went wrong");
-        console.log(err);
+        // console.log(err);
       });
   }, []);
 
@@ -139,7 +139,7 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
           if (item.image) {
             const imageRef = ref(storage, item.image);
             await deleteObject(imageRef);
-            console.log("image deleted", item.image);
+            // console.log("image deleted", item.image);
           }
         }
       } catch (error) {
@@ -159,7 +159,7 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
       })
       .catch((err) => {
         toast.error("Failed to delete product");
-        console.log(err);
+        // console.log(err);
       });
   }, []);
 

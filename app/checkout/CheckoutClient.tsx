@@ -22,8 +22,8 @@ const CheckoutClient = () => {
 
   const router = useRouter();
 
-  console.log("paymentIntent", paymentIntent);
-  console.log("clientSecret", clientSecret);
+  // console.log("paymentIntent", paymentIntent);
+  // console.log("clientSecret", clientSecret);
 
   useEffect(() => {
     //create a payment intent as soon as page loads
@@ -54,7 +54,7 @@ const CheckoutClient = () => {
         })
         .catch((error) => {
           setError(true);
-          console.log("Error", error);
+          // console.log("Error", error);
           toast.error("Something went wrong!!");
         });
     }
