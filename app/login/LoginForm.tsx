@@ -47,7 +47,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ currentUser }) => {
       setIsLoading(false);
 
       if (callback?.ok) {
-        router.push("/cart");
+        router.push("/");
         router.refresh();
         toast.success("Logged In");
       }
@@ -62,7 +62,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ currentUser }) => {
   }
   return (
     <>
-      <Heading title="Log In To Eshop" />
+      <Heading title="Log In To Store" />
       <Button
         outline
         label="Continue with Google"
