@@ -43,7 +43,7 @@ const SearchBar = () => {
         {...register("searchTerm")}
         autoComplete="off"
         type="text"
-        placeholder="Explore E-shop"
+        placeholder="Explore Products"
         className="p-2 border border-gray-300 rounded-l-md focus:outline-none 
       focus:border-[0.5px] focus:border-slate-50 w-80"
       />

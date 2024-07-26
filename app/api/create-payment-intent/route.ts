@@ -38,7 +38,7 @@ import { getCurrentUser } from '@/actions/getCurrentUser';
     const orderData = {
         user: {connect : {id: currentUser.id}},
         amount: total,
-        currency: 'usd',
+        currency: 'ksh',
         status: 'pending',
         deliveryStatus: 'pending',
         paymentIntentId: payment_intent_id,
@@ -83,7 +83,7 @@ import { getCurrentUser } from '@/actions/getCurrentUser';
         //create the payment intent
             const paymentIntent = await stripe.paymentIntents.create({
                 amount: total,
-                currency: 'usd',
+                currency: 'ksh',
                 automatic_payment_methods: {enabled: true}
             })
 

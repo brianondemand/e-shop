@@ -48,7 +48,7 @@ const OrdersClient: React.FC<OrdersClientProps> = ({ orders }) => {
     { field: "customer", headerName: "Customer Name", width: 150 },
     {
       field: "amount",
-      headerName: "Amount(USD)",
+      headerName: "Amount(KSH)",
       width: 100,
       renderCell: (params) => {
         return (
